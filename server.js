@@ -12,6 +12,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 router.post("/login", Users.login);
 router.get("/getusers", Users.getuser);
 router.post("/register", Users.register);
+router.get("/createinstance", Users.createInstance);
 app.use("/api", router);
 app.listen(port, () => {
   console.log("Server Listening on port :" + port);
